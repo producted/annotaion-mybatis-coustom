@@ -42,11 +42,11 @@ public class ResultSetMapper {
                             System.out.println("cloumnName 值： " + columnName);
                             BeanUtils.setProperty(thisBean,field.getName(),columValue);
                         }
-                        if (outList == null) {
-                            outList = new ArrayList<T>();
-                        }
-                        outList.add(thisBean);
                     }
+                    if (outList == null) {
+                        outList = new ArrayList<T>();
+                    }
+                    outList.add(thisBean);
                 }
             }
         } catch (InstantiationException e) {
