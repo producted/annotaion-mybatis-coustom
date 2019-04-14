@@ -22,7 +22,6 @@ public class DaoOpretorFactory {
         if (method.isAnnotationPresent(Insert.class)) {
             sql = generateSql(method.getAnnotation(Insert.class).value(),
                     Insert.class.getSimpleName());
-            sql = method.getAnnotation(Insert.class).value();
             if (sql != null) {
                 insert(sql,parameters);
             }
